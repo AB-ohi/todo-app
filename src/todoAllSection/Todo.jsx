@@ -6,9 +6,9 @@ const Todo = () => {
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Task Name</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,23 +16,10 @@ const Todo = () => {
       <tr>
         <th>1</th>
         <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
+        <td></td>
+        <td><button className="btn">Add In-Progress</button></td>
       </tr>
-      {/* row 2 */}
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      {/* row 3 */}
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
+      
     </tbody>
   </table>
 </div>

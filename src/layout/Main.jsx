@@ -5,7 +5,8 @@ const Main = () => {
     return (
         <div className='full-body flex items-center justify-around'>
             <div>
-                <h1 className='text-center '>Todo List</h1>
+                <h1 className='text-center title-name'>Todo List</h1>
+                <div className='header-underline'></div>
             <TodoList/>
             </div>
             <div></div>
