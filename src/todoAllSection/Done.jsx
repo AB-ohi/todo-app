@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TaskDeleteBtn from "./btn/TaskDeleteBtn";
 
 const Done = () => {
   const [done,setDone] = useState([])
@@ -28,7 +29,7 @@ const Done = () => {
                   <th>{index + 1}</th>
                   <td>{task.task_name}</td>
                   <td></td>
-                  <td><button className="btn">Done</button></td>
+                  <td><TaskDeleteBtn/></td>
                 </tr>
               ))
             ) : (

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import DoneBtn from "./btn/DoneBtn";
 
 const InProgress = () => {
   const [inprogress,setInprogress] = useState([])
@@ -28,7 +29,7 @@ const InProgress = () => {
                   <th>{index + 1}</th>
                   <td>{task.task_name}</td>
                   <td></td>
-                  <td><button className="btn">Done</button></td>
+                  <td><DoneBtn/></td>
                 </tr>
               ))
             ) : (

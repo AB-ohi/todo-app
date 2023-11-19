@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import InprogressBtn from "./btn/inprogressBtn";
 
 const Todo = () => {
 
@@ -29,7 +30,7 @@ const Todo = () => {
         <th>{index+1}</th>
         <td>{todos.task_name}</td>
         <td></td>
-        <td><button className="btn">Add In-Progress</button></td>
+        <td><InprogressBtn/></td>
       </tr>
           )
       }
