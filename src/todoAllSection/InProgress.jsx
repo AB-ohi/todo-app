@@ -5,7 +5,7 @@ import DoneBtn from "./btn/DoneBtn";
 const InProgress = () => {
   const [inprogress,setInprogress] = useState([])
   const fetchData = () => {
-    fetch('http://localhost:1234/inprogress')
+    fetch('https://todo-app-sever.vercel.app/inprogress')
       .then(res => res.json())
       .then(data => setInprogress(data))
       .catch(error => console.error('Error fetching data:', error));

@@ -7,7 +7,7 @@ const InprogressBtn = ({ task_name, id, updateTodoList  }) => {
     const AddTodo = { task_name, id };
     console.log(AddTodo);
 
-    fetch("http://localhost:1234/inprogress", {
+    fetch("https://todo-app-sever.vercel.app/inprogress", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -15,7 +15,7 @@ const InprogressBtn = ({ task_name, id, updateTodoList  }) => {
       body: JSON.stringify(AddTodo),
     })
     .then(() => {
-      fetch(`http://localhost:1234/todo/${id}`, {
+      fetch(`https://todo-app-sever.vercel.app/todo/${id}`, {
         method: "DELETE",
       })
         .then(() => {

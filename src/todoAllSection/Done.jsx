@@ -5,7 +5,7 @@ const Done = () => {
   const [done,setDone] = useState([])
 const doneData = () => {
   
-  fetch('http://localhost:1234/done')
+  fetch('https://todo-app-sever.vercel.app/done')
   .then(res => res.json())
   .then(data => setDone(data))
 }

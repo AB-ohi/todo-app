@@ -13,7 +13,7 @@ const Todo = () => {
     const AddTask = {task_name}
     // console.log(task_name)
 
-    await fetch("http://localhost:1234/todo",{
+    await fetch("https://todo-app-sever.vercel.app/todo",{
       method:"POST",
       headers:{
         'content-type':'application/json' 
@@ -21,19 +21,19 @@ const Todo = () => {
       body:JSON.stringify(AddTask)
     })
     setAddTaskInput('')
-    fetch('http://localhost:1234/todo')
+    fetch('https://todo-app-sever.vercel.app/todo')
       .then((res) => res.json())
       .then((data) => setTodo(data));
   }
 
   useEffect(()=>{
-    fetch('http://localhost:1234/todo')
+    fetch('https://todo-app-sever.vercel.app/todo')
     .then(res => res.json())
     .then(data => setTodo(data))
 },[])
 
 const updateTodoList = () => {
-  fetch("http://localhost:1234/todo")
+  fetch("https://todo-app-sever.vercel.app/todo")
     .then((response) => response.json())
     .then((data) => setTodo(data))
     .catch((error) => console.error("Error fetching updated todo list:", error));

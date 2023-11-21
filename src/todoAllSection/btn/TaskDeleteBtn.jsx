@@ -4,7 +4,7 @@
 // eslint-disable-next-line react/prop-types
 const TaskDeleteBtn = ({id, doneData}) =>{
     const handelAddToCart = () => {
-      fetch(`http://localhost:1234/done/${id}`, {
+      fetch(`https://todo-app-sever.vercel.app/done/${id}`, {
         method: "DELETE",
       })
       doneData()

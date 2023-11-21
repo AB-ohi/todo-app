@@ -5,7 +5,7 @@ const DoneBtn = ({ task_name, id, fetchData }) => {
   const handelAddToCart = () => {
     const doneTaskAdd = { task_name, id };
 
-    fetch("http://localhost:1234/done", {
+    fetch("https://todo-app-sever.vercel.app/done", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -13,7 +13,7 @@ const DoneBtn = ({ task_name, id, fetchData }) => {
       body: JSON.stringify(doneTaskAdd),
     })
     .then(() => {
-      fetch(`http://localhost:1234/inprogress/${id}`,{
+      fetch(`https://todo-app-sever.vercel.app/inprogress/${id}`,{
         method: "DELETE",
       })
       .then(() => {
