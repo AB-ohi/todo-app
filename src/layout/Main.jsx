@@ -7,6 +7,7 @@ const Main = () => {
             <div>
                 <h1 className='text-center title-name'>Todo List</h1>
                 <div className='header-underline'></div>
+                <p className='text-red-600'>Please reload the page after adding task in each section*</p>
             <TodoList/>
             </div>
             <div></div>

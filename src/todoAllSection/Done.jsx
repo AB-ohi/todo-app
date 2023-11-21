@@ -3,12 +3,15 @@ import TaskDeleteBtn from "./btn/TaskDeleteBtn";
 
 const Done = () => {
   const [done,setDone] = useState([])
-
+const doneData = () => {
+  
+  fetch('http://localhost:1234/done')
+  .then(res => res.json())
+  .then(data => setDone(data))
+}
 
   useEffect(()=>{
-    fetch('http://localhost:1234/inprogress')
-    .then(res => res.json())
-    .then(data => setDone(data))
+    doneData()
 },[])
     return (
         <div>
@@ -29,7 +32,7 @@ const Done = () => {
                   <th>{index + 1}</th>
                   <td>{task.task_name}</td>
                   <td></td>
-                  <td><TaskDeleteBtn/></td>
+                  <td><TaskDeleteBtn id={task._id} doneData={doneData}/></td>
                 </tr>
               ))
             ) : (

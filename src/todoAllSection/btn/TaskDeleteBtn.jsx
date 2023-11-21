@@ -1,39 +1,20 @@
-const TaskDeleteBtn = () =>{
+
+
+
+// eslint-disable-next-line react/prop-types
+const TaskDeleteBtn = ({id, doneData}) =>{
     const handelAddToCart = () => {
-        console.log("add task")
-        // const cartItem = { name, image, description, id, email, services };
-       
-    
-    
-        // fetch("/api/trynow", {
-        //   method: "POST",
-        //   headers: {
-        //     "content-type": "application/json",
-        //   },
-        //   body: JSON.stringify(cartItem),
-        // })
-        //   .then(() => {
-        //     setClicked(true);
-        //     Swal.fire({
-        //       icon: "success",
-        //       title: "Added to Cart",
-        //       showConfirmButton: false,
-        //       timer: 1500,
-        //     });
-        //   })
-        //   .catch((error) => {
-        //     console.error("Error adding to cart:", error);
-        //     Swal.fire({
-        //       icon: "error",
-        //       title: "Error",
-        //       text: "An error occurred while adding to cart.",
-        //       confirmButtonText: "OK",
-        //     });
-        //   });
+      fetch(`http://localhost:1234/done/${id}`, {
+        method: "DELETE",
+      })
+      doneData()
+      
       };
       return(
         <div>
-            <button onClick={handelAddToCart} className="btn">Delete</button>
+            <button onClick={handelAddToCart} className="btn">
+              Delete
+              </button>
         </div>
       )
 
