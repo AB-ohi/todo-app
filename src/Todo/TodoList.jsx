@@ -9,7 +9,7 @@ const TodoList = () => {
          <input
           type="radio"
           name="my_tabs_2"
-          className="tab"
+          className="tab md:text-black text-white"
           aria-label="Todo"
           checked
         />
@@ -20,8 +20,8 @@ const TodoList = () => {
         <input
           type="radio"
           name="my_tabs_2"
-          className="tab"
-          aria-label="In-Progress"
+          className="tab md:text-black text-white"
+          aria-label="Inprogress"
          
         />
         <div className="tab-content bg-base-100 border-base-300 rounded-box p-10">
@@ -31,7 +31,7 @@ const TodoList = () => {
         <input
           type="radio"
           name="my_tabs_2"
-          className="tab"
+          className="tab md:text-black text-white"
           aria-label="Done"
         />
         <div className="tab-content bg-base-100 border-base-300 rounded-box p-10">
